@@ -1,6 +1,6 @@
 # You Smile You Lose
 
-We show you funny videos. If you smile, you lose !
+We show you funny videos. If you smile, you lose!
 
  [https://smilelose.socialcase.fr/](https://smilelose.socialcase.fr)
 
