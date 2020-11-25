@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>You Smile You Lose</title>
+  <meta name="description"
+    content="We show you funny videos. If you smile, you lose ! A wholesome challenge that will make you feel better !">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="You Smile You Lose">
+  <meta property="og:description" content="We show you funny videos. If you smile, you lose !">
+  <meta property="og:url" content="https://smilelose.socialcase.fr/">
+  <meta property="og:site_name" content="You Smile You Lose">
+  <meta property="og:image" content="https://smilelose.socialcase.fr/images/preview.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You Smile You Lose">
+  <meta name="twitter:description" content="We show you funny videos. If you smile, you lose !">
+  <meta name="twitter:image" content="https://smilelose.socialcase.fr/images/preview.JPG">
+  <link rel="icon" href="img/favicon.gif">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body id="global">
+  <div id="video"></div>
+  <div id="home">
+    <div id="content">
+      <h1>
+        You Smile, You Lose
+      </h1>
+      <p class="description">
+        We show you funny videos. If you smile, you lose !<br>
+        Every time you don't smile, your score increases <br>
+        <strong>We do not collect any data at all<span>&#42;</span></strong>. <br><br>
+        <span style="font-size: 13px;"><span>&#42;</span>The code is open source under the MIT Licence: <a
+            href="https://github.com/sahnas/ysyl" target="_blank;">GitHub</a></span>
+      </p>
+      <a href="" id="actualshit" class="button">
+        Let's start
+      </a>
+    </div>
+  </div>
+  <div id="theater">
+    <span id="smileStatus">Getting smile status...</span>
+    <a href="" id="skipVideo">Skip >></a>
+    <a href="" id="pauseVideo">Pause</a>
+    <video id="webcam" autoplay muted></video>
+    <div id="intermission">
+      <img id="loading" src="https://i.stack.imgur.com/qq8AE.gif" width="32" />
+      <div id="result">
+        <span id="resultSmileStatus" class="lose"></span>
+        <br />
+        <strong id="score" class="lose"><span id="scoreTitle">Score</span>: <span id="scoreResult">0</span></strong>
+        <br /><br />
+        <a id="nextVideo" href="" class="button">Next video</a>
+        <br /><br />
+        <strong>
+          Having fun ? <br />Challenge your friends not to smile
+        </strong>
+        <br /><br />
+        <ul class="bwp-single-post-share-list list-unstyled">
+          <li>
+            <a href="https://twitter.com/share?url=https://smilelose.socialcase.fr/&amp;text=You Smile You Lose"
+              rel="nofollow noopener" target="_blank" class="bwp-twitter-share"
+              onclick="window.open('https://twitter.com/share?url=https://smilelose.socialcase.fr/&amp;text=You Smile You Lose', 'Twitter', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://smilelose.socialcase.fr/&amp;t=You%20Smile%20You%20Lose"
+              rel="nofollow noopener" target="_blank" class="bwp-facebook-share"
+              onclick="window.open('https://www.facebook.com/sharer.php?u=https://smilelose.socialcase.fr/&amp;t=You%20Smile%20You%20Lose', 'Facebook', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/dialog/send?link=https://smilelose.socialcase.fr/&amp;app_id=844511858946898&amp;redirect_uri=https://smilelose.socialcase.fr/"
+              rel="nofollow noopener" target="_blank" class="bwp-messenger-share"
+              onclick="window.open('https://www.facebook.com/dialog/send?link=https://smilelose.socialcase.fr/&amp;app_id=844511858946898&amp;redirect_uri=https://smilelose.socialcase.fr/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/?text=https://smilelose.socialcase.fr/" rel="nofollow noopener" target="_blank"
+              class="bwp-whatapp-share"
+              onclick="window.open('https://wa.me/?text=https://smilelose.socialcase.fr/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://smilelose.socialcase.fr/"
+              rel="nofollow noopener" target="_blank" class="bwp-linkedin-share"
+              onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://smilelose.socialcase.fr/&amp;media=true', 'Linkedin', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.reddit.com/submit?url=https://smilelose.socialcase.fr/&amp;title=You%20Smile%20You%20Lose"
+              rel="nofollow noopener" target="_blank" class="bwp-reddit-share"
+              onclick="window.open('https://www.reddit.com/submit?url=https://smilelose.socialcase.fr/&amp;title=You%20Smile%20You%20Loose', 'Reddit', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+              <i class="fab fa-reddit-alien"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="player"></div>
+  </div>
+  <div id="credit">
+    <div class="calltoaction">
+      <h3>No more videos</h3>
+      <p>
+        This will be frequently updated, come back for more !
+      </p>
+      <strong>
+        Had fun ? <br />Challenge your friends not to smile
+      </strong>
+      <br /><br />
+      <ul class="bwp-single-post-share-list list-unstyled">
+        <li>
+          <a href="https://twitter.com/share?url=https://smilelose.socialcase.fr/&amp;text=You Smile You Lose"
+            rel="nofollow noopener" target="_blank" class="bwp-twitter-share"
+            onclick="window.open('https://twitter.com/share?url=https://smilelose.socialcase.fr/&amp;text=You Smile You Lose', 'Twitter', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/sharer.php?u=https://smilelose.socialcase.fr/&amp;t=You%20Smile%20You%20Lose"
+            rel="nofollow noopener" target="_blank" class="bwp-facebook-share"
+            onclick="window.open('https://www.facebook.com/sharer.php?u=https://smilelose.socialcase.fr/&amp;t=You%20Smile%20You%20Lose', 'Facebook', 'width=700,height=500,left='+(screen.availWidth/2-350)+',top='+(screen.availHeight/2-250)+''); return false;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/dialog/send?link=https://smilelose.socialcase.fr/&amp;app_id=844511858946898&amp;redirect_uri=https://smilelose.socialcase.fr/"
+            rel="nofollow noopener" target="_blank" class="bwp-messenger-share"
+            onclick="window.open('https://www.facebook.com/dialog/send?link=https://smilelose.socialcase.fr/&amp;app_id=844511858946898&amp;redirect_uri=https://smilelose.socialcase.fr/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+            <i class="fab fa-facebook-messenger"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/?text=https://smilelose.socialcase.fr/" rel="nofollow noopener" target="_blank"
+            class="bwp-whatapp-share"
+            onclick="window.open('https://wa.me/?text=https://smilelose.socialcase.fr/', 'Whatapp', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://smilelose.socialcase.fr/"
+            rel="nofollow noopener" target="_blank" class="bwp-linkedin-share"
+            onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://smilelose.socialcase.fr/&amp;media=true', 'Linkedin', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/submit?url=https://smilelose.socialcase.fr/&amp;title=You%20Smile%20You%20Lose"
+            rel="nofollow noopener" target="_blank" class="bwp-reddit-share"
+            onclick="window.open('https://www.reddit.com/submit?url=https://smilelose.socialcase.fr/&amp;title=You%20Smile%20You%20Loose', 'Reddit', 'width=800,height=700,left='+(screen.availWidth/2-400)+',top='+(screen.availHeight/2-350)+''); return false;">
+            <i class="fab fa-reddit-alien"></i>
+          </a>
+        </li>
+      </ul>
+      <p><a href="" class="button">Retry !</a></p>
+      <!-- <img src='img/heic0910e.jpg' height="300px" width="500px"> -->
+    </div>
+  </div>
+  <!-- <script src='ext/ext.js'></script> -->
+</body>
+    
+</html>
