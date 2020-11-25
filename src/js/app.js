@@ -1,88 +1,90 @@
-import * as faceapi from "face-api.js";
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-use-before-define */
+import * as faceapi from 'face-api.js';
 
 const listOfVideoIds = [
-  "5lL5xRKquPQ",
-  "pOeig6_aAtE",
-  "KE2yiDiaTwA",
-  "aE3hKVtwsJ0",
-  "QT13kk8HDDo",
-  "7w-6rZ28Yzo",
-  "RURKjPcGBNg",
-  "_rduOZySpFo",
-  "cY469FbO96A",
-  "F-X4SLhorvw",
-  "nykf3FU_JiI",
-  "FLwhHN_7LPo",
-  "RRwqftGrxf4",
-  "l1heD4T8Yco",
-  "PVRZV3OZRH4",
-  "Kg-HHXuOBlw",
-  "NhBktFVTjf8",
-  "oposLSDXVkY",
-  "UqiGMsMUiGI",
-  "2riqL4GOfR8",
-  "9dtQAIoFCwc",
-  "RGSv5Of6EBQ",
-  "p7LHIiSC9h0",
-  "LXioy-oSkWg",
-  "U1SiveWVIIo",
-  "sp_WV91jx8E",
-  "2F0pklg1CUY",
-  "7merzCPl-Xg",
-  "iOPxJRrJgmM",
-  "e4nc3uO_eCQ",
-  "kxC8AxSjmqQ",
-  "W5aEBqSkS_Q",
-  "W3GrSMYbkBE",
-  "GzgavGowD_A",
-  "JBd0ERZhCis",
-  "okSM8i2EpI0",
-  "bioP_2e_xls",
-  "LV6YR48fA0E",
-  "o-kOE0Uev74",
-  "lnGL4cbxd1c",
-  "knlJBy1eHyw",
-  "IuysY1BekOE",
-  "cx-xD_GOmZg",
-  "boDSEeGt8hg",
-  "yr_Rpk9HR1g",
-  "c4hXcr8vHYg",
-  "laELhSkm44o",
-  "ZCTKA_bAQyU",
-  "6cmg75bgkkg",
-  "cmy-jzcZp8o",
-  "svU3s1GUGak",
-  "BEkbQvWsCI8",
-  "lYb83GT4ELw",
-  "ErbLGWhWaKI",
-  "yBLdQ1a4-JI"
+  '5lL5xRKquPQ',
+  'pOeig6_aAtE',
+  'KE2yiDiaTwA',
+  'aE3hKVtwsJ0',
+  'QT13kk8HDDo',
+  '7w-6rZ28Yzo',
+  'RURKjPcGBNg',
+  '_rduOZySpFo',
+  'cY469FbO96A',
+  'F-X4SLhorvw',
+  'nykf3FU_JiI',
+  'FLwhHN_7LPo',
+  'RRwqftGrxf4',
+  'l1heD4T8Yco',
+  'PVRZV3OZRH4',
+  'Kg-HHXuOBlw',
+  'NhBktFVTjf8',
+  'oposLSDXVkY',
+  'UqiGMsMUiGI',
+  '2riqL4GOfR8',
+  '9dtQAIoFCwc',
+  'RGSv5Of6EBQ',
+  'p7LHIiSC9h0',
+  'LXioy-oSkWg',
+  'U1SiveWVIIo',
+  'sp_WV91jx8E',
+  '2F0pklg1CUY',
+  '7merzCPl-Xg',
+  'iOPxJRrJgmM',
+  'e4nc3uO_eCQ',
+  'kxC8AxSjmqQ',
+  'W5aEBqSkS_Q',
+  'W3GrSMYbkBE',
+  'GzgavGowD_A',
+  'JBd0ERZhCis',
+  'okSM8i2EpI0',
+  'bioP_2e_xls',
+  'LV6YR48fA0E',
+  'o-kOE0Uev74',
+  'lnGL4cbxd1c',
+  'knlJBy1eHyw',
+  'IuysY1BekOE',
+  'cx-xD_GOmZg',
+  'boDSEeGt8hg',
+  'yr_Rpk9HR1g',
+  'c4hXcr8vHYg',
+  'laELhSkm44o',
+  'ZCTKA_bAQyU',
+  '6cmg75bgkkg',
+  'cmy-jzcZp8o',
+  'svU3s1GUGak',
+  'BEkbQvWsCI8',
+  'lYb83GT4ELw',
+  'ErbLGWhWaKI',
+  'yBLdQ1a4-JI',
 ];
 
-let isFirstRound = true
-let isUsingCamera = false
-let currentSmileStatus = false
-let score = 0
-let videoSkipped = false
-let statusClass = "win"
-let scoreTitle = "Score"
-let pausedVideo = false
-let countNoFace = 0
+let isFirstRound = true;
+let isUsingCamera = false;
+let currentSmileStatus = false;
+let score = 0;
+let videoSkipped = false;
+let statusClass = 'win';
+let scoreTitle = 'Score';
+let pausedVideo = false;
+let countNoFace = 0;
 
-document.getElementById('actualshit').addEventListener('click', event => setupFaceDetection(event))
-document.getElementById('nextVideo').addEventListener('click', event => showNextVideo(event))
-document.getElementById('skipVideo').addEventListener('click', event => skipVideo(event))
-document.getElementById('pauseVideo').addEventListener('click', event => pauseVideo(event))
+document.getElementById('actualshit').addEventListener('click', (event) => { return setupFaceDetection(event); });
+document.getElementById('nextVideo').addEventListener('click', (event) => { return showNextVideo(event); });
+document.getElementById('skipVideo').addEventListener('click', (event) => { return skipVideo(event); });
+document.getElementById('pauseVideo').addEventListener('click', (event) => { return pauseVideo(event); });
 
 // initiate webcam
-const webcam = document.getElementById("webcam")
-webcam.addEventListener("play", refreshState)
+const webcam = document.getElementById('webcam');
+webcam.addEventListener('play', refreshState);
 
 // initiate youtube player and api
-let player
-const tag = document.createElement('script')
-tag.src = "https://www.youtube.com/iframe_api"
-const firstScriptTag = document.getElementsByTagName('script')[0]
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+let player;
+const tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 /**
  * Launch the whole process following thoses steps
@@ -93,13 +95,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
  * @param {Object} event event of the click
  */
 async function setupFaceDetection(event) {
-    event.preventDefault()
+  event.preventDefault();
 
-    document.getElementById('home').remove()
-    document.getElementById("smileStatus").style.display = "block"
+  document.getElementById('home').remove();
+  document.getElementById('smileStatus').style.display = 'block';
 
-    await loadModels()
-    await setupWebcam()
+  await loadModels();
+  await setupWebcam();
 }
 
 /**
@@ -108,17 +110,17 @@ async function setupFaceDetection(event) {
  * @async
  */
 async function loadModels() {
-    let modelsUrl = "https://smilelose.socialcase.fr/models";
+  const modelsUrl = 'https://smilelose.socialcase.fr/models';
 
-    // Use this for local development
-      // this should be the IP of your HTTPS server (example : 192.168.5.40)
-      // const host = "localhost"
-      // this should the port where your HTTPS server is served (default : 8080)
-      // const port = "8080"
-      // modelsUrl = `https://${host}:${port}/models`
+  // Use this for local development
+  // this should be the IP of your HTTPS server (example : 192.168.5.40)
+  // const host = "localhost"
+  // this should the port where your HTTPS server is served (default : 8080)
+  // const port = "8080"
+  // modelsUrl = `https://${host}:${port}/models`
 
-    await faceapi.nets.tinyFaceDetector.loadFromUri(modelsUrl)
-    await faceapi.nets.faceExpressionNet.loadFromUri(modelsUrl)
+  await faceapi.nets.tinyFaceDetector.loadFromUri(modelsUrl);
+  await faceapi.nets.faceExpressionNet.loadFromUri(modelsUrl);
 }
 
 /**
@@ -127,26 +129,27 @@ async function loadModels() {
  * On error, the error is logged and the process continue.
  */
 async function setupWebcam() {
-    navigator.mediaDevices
-        .getUserMedia({ video: true, audio: false })
-        .then(stream => {
-            webcam.srcObject = stream
-        })
-        .catch(() => {
-            document.getElementById("smileStatus").textContent = "Loading..."
-            isUsingCamera = false
-            onPlayerReady()
-        })
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then((stream) => {
+      webcam.srcObject = stream;
+    })
+    .catch(() => {
+      document.getElementById('smileStatus').textContent = 'Loading...';
+      isUsingCamera = false;
+      onPlayerReady();
+    });
 }
 
 /**
  * Setup the youtube player using the official API
  */
 async function setupYoutubePlayer() {
-  let savedIdVideo = extractRandomAvailableVideoId();
-  player = new YT.Player("player", {
-    height: "100%",
-    width: "100%",
+  const savedIdVideo = extractRandomAvailableVideoId();
+  // eslint-disable-next-line no-undef
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
     videoId: savedIdVideo,
     playerVars: {
       controls: 0,
@@ -157,9 +160,9 @@ async function setupYoutubePlayer() {
       disablekb: 1,
       autoplay: 1,
       start: 0,
-      ...(savedIdVideo == "aE3hKVtwsJ0" && { end: 36 }),
-      ...(savedIdVideo == "6cmg75bgkkg" && { end: 145 }),
-      ...(savedIdVideo == "W3GrSMYbkBE" && { end: 101 })
+      ...(savedIdVideo === 'aE3hKVtwsJ0' && { end: 36 }),
+      ...(savedIdVideo === '6cmg75bgkkg' && { end: 145 }),
+      ...(savedIdVideo === 'W3GrSMYbkBE' && { end: 101 }),
     },
     events: { onStateChange: onPlayerStateChange, onReady: onPlayerReady },
   });
@@ -168,8 +171,8 @@ async function setupYoutubePlayer() {
 function onPlayerReady(event) {
   if (isFirstRound) startFirstRound();
   if (event) {
-      event.target.playVideo()
-      document.addEventListener("keyup", spaceListener);
+    event.target.playVideo();
+    document.addEventListener('keyup', spaceListener);
   }
 }
 
@@ -177,7 +180,7 @@ function onPlayerReady(event) {
  * Space press listener
  */
 let spaceListener = (e) => {
-  if (e.code === "Space") {
+  if (e.code === 'Space') {
     pauseVideo(e);
   }
 };
@@ -195,7 +198,7 @@ async function refreshState() {
       .withFaceExpressions();
 
     if (!detections.length) {
-      countNoFace++;
+      countNoFace += 1;
       if (countNoFace > 5) {
         writeNoFace();
       }
@@ -223,34 +226,34 @@ async function refreshState() {
 }
 
 function writeToSomeone() {
-  document.getElementById("smileStatus").textContent = "Is anybody here?";
+  document.getElementById('smileStatus').textContent = 'Is anybody here?';
 }
 
 function writeNoFace() {
-    document.getElementById("smileStatus").textContent = "Don't hide your face!";
+  document.getElementById('smileStatus').textContent = "Don't hide your face!";
 }
 
 function writeSmile() {
-  document.getElementById("smileStatus").textContent = "YOU SMILE !";
+  document.getElementById('smileStatus').textContent = 'YOU SMILE !';
 }
 
 function writeNoSmile() {
-  document.getElementById("smileStatus").textContent = "not smiling";
+  document.getElementById('smileStatus').textContent = 'not smiling';
 }
 
 /**
  * Entrypoint. This should be use once.
  */
 function startFirstRound() {
-    isFirstRound = false
-    currentSmileStatus = false
+  isFirstRound = false;
+  currentSmileStatus = false;
 
-    document.getElementById("loading").style.display = 'none'
-    document.getElementById('intermission').className = 'fadeOut'
-    document.getElementById("skipVideo").style.display = "block"
-    document.getElementById("pauseVideo").style.display = "block"
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('intermission').className = 'fadeOut';
+  document.getElementById('skipVideo').style.display = 'block';
+  document.getElementById('pauseVideo').style.display = 'block';
 
-    onPlayerReady();
+  onPlayerReady();
 }
 
 async function launchYoutubePlayer() {
@@ -262,9 +265,9 @@ async function launchYoutubePlayer() {
  * on video end or skipped
  */
 function onVideoEnd() {
-    player.stopVideo()
-    document.removeEventListener("keyup", spaceListener);
-    showIntermission()
+  player.stopVideo();
+  document.removeEventListener('keyup', spaceListener);
+  showIntermission();
 }
 
 /**
@@ -272,26 +275,26 @@ function onVideoEnd() {
  * Listening to the event onPlayerStateChange of the youtube api.
  */
 function onPlayerStateChange(event) {
-    // 0 means the video is over
-    if (event.data === 0) {
-        onVideoEnd()
-    }
+  // 0 means the video is over
+  if (event.data === 0) {
+    onVideoEnd();
+  }
 }
 
 function toogleToPlay() {
-  document.getElementById("pauseVideo").textContent = "Play"
-  player.pauseVideo()
+  document.getElementById('pauseVideo').textContent = 'Play';
+  player.pauseVideo();
 }
 
 function toogleToPause() {
-  document.getElementById("pauseVideo").textContent = "Pause"
-  player.playVideo()
+  document.getElementById('pauseVideo').textContent = 'Pause';
+  player.playVideo();
 }
 
 function pauseVideo(event) {
   event.preventDefault();
   pausedVideo = !pausedVideo;
-  pausedVideo ? toogleToPlay() : toogleToPause() // jshint ignore:line
+  pausedVideo ? toogleToPlay() : toogleToPause(); // jshint ignore:line
 }
 
 /**
@@ -299,18 +302,18 @@ function pauseVideo(event) {
  * match with win or lose status
  */
 function matchUiWithWinStatus() {
-    if (currentSmileStatus) {
-        statusClass = "lose"
-        scoreTitle = "Your score was"
-    } else {
-        statusClass = "win"
-        scoreTitle = "Score"
-    }
+  if (currentSmileStatus) {
+    statusClass = 'lose';
+    scoreTitle = 'Your score was';
+  } else {
+    statusClass = 'win';
+    scoreTitle = 'Score';
+  }
 
-    document.getElementById('resultSmileStatus').className = statusClass
-    document.getElementById('score').className = statusClass
-    document.getElementById('scoreTitle').textContent = scoreTitle
-    document.getElementById('scoreResult').textContent = score
+  document.getElementById('resultSmileStatus').className = statusClass;
+  document.getElementById('score').className = statusClass;
+  document.getElementById('scoreTitle').textContent = scoreTitle;
+  document.getElementById('scoreResult').textContent = score;
 }
 
 /**
@@ -318,33 +321,33 @@ function matchUiWithWinStatus() {
  * Result is defined by various global variable updated by the models.
  */
 function showIntermission() {
-    let smileStatusText = "Face detection was not ready."
+  let smileStatusText = 'Face detection was not ready.';
 
-    if (isUsingCamera) {
-        if (videoSkipped) {
-            videoSkipped = false
-            // player will not lose if he skips the video
-            currentSmileStatus = false
-            smileStatusText = "You skipped the video ! It will not count !"
-            matchUiWithWinStatus()
-        } else if (currentSmileStatus) {
-            smileStatusText = "You SMILED during the video !"
-            matchUiWithWinStatus()
-            score = 0
-        } else {
-            smileStatusText = "You didn't smile during the video !"
-            score++
-            matchUiWithWinStatus()
-        }
+  if (isUsingCamera) {
+    if (videoSkipped) {
+      videoSkipped = false;
+      // player will not lose if he skips the video
+      currentSmileStatus = false;
+      smileStatusText = 'You skipped the video ! It will not count !';
+      matchUiWithWinStatus();
+    } else if (currentSmileStatus) {
+      smileStatusText = 'You SMILED during the video !';
+      matchUiWithWinStatus();
+      score = 0;
+    } else {
+      smileStatusText = "You didn't smile during the video !";
+      score += 1;
+      matchUiWithWinStatus();
     }
+  }
 
-    document.getElementById('resultSmileStatus').textContent = smileStatusText
-    document.getElementById('loading').style.display = 'none'
-    document.getElementById('skipVideo').style.display = 'none'
-    document.getElementById("pauseVideo").style.display = 'none'
-    document.getElementById('nextVideo').style.display = 'inline-block'
-    document.getElementById('result').style.display = 'block'
-    document.getElementById('intermission').className = 'fadeIn'
+  document.getElementById('resultSmileStatus').textContent = smileStatusText;
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('skipVideo').style.display = 'none';
+  document.getElementById('pauseVideo').style.display = 'none';
+  document.getElementById('nextVideo').style.display = 'inline-block';
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('intermission').className = 'fadeIn';
 }
 
 /**
@@ -352,31 +355,31 @@ function showIntermission() {
  * This should be only trigger but the click on next video.
  */
 function showNextVideo(event) {
-    event.preventDefault()
+  event.preventDefault();
 
-    document.getElementById('loading').style.display = 'block'
-    document.getElementById('result').style.display = 'none'
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('result').style.display = 'none';
 
-    if (listOfVideoIds.length) {
-        const nextVideoId = extractRandomAvailableVideoId()
-        player.loadVideoById({
-          videoId: nextVideoId,
-          startSeconds: 0,
-          ...(nextVideoId == "aE3hKVtwsJ0" && { endSeconds: 36 }),
-          ...(nextVideoId == "6cmg75bgkkg" && { endSeconds: 145 }),
-          ...(nextVideoId == "W3GrSMYbkBE" && { endSeconds: 101 })
-        });
-        document.addEventListener("keyup", spaceListener);
+  if (listOfVideoIds.length) {
+    const nextVideoId = extractRandomAvailableVideoId();
+    player.loadVideoById({
+      videoId: nextVideoId,
+      startSeconds: 0,
+      ...(nextVideoId === 'aE3hKVtwsJ0' && { endSeconds: 36 }),
+      ...(nextVideoId === '6cmg75bgkkg' && { endSeconds: 145 }),
+      ...(nextVideoId === 'W3GrSMYbkBE' && { endSeconds: 101 }),
+    });
+    document.addEventListener('keyup', spaceListener);
 
-        setTimeout(() => {
-            currentSmileStatus = false
-            document.getElementById('intermission').className = 'fadeOut'
-            document.getElementById('skipVideo').style.display = 'block'
-            document.getElementById("pauseVideo").style.display = "block"
-        }, 1000)
-    } else {
-        showCredit()
-    }
+    setTimeout(() => {
+      currentSmileStatus = false;
+      document.getElementById('intermission').className = 'fadeOut';
+      document.getElementById('skipVideo').style.display = 'block';
+      document.getElementById('pauseVideo').style.display = 'block';
+    }, 1000);
+  } else {
+    showCredit();
+  }
 }
 
 /**
@@ -384,36 +387,36 @@ function showNextVideo(event) {
  * and trigger video end function
  */
 function skipVideo(event) {
-    event.preventDefault()
-    videoSkipped = true
-    onVideoEnd()
+  event.preventDefault();
+  videoSkipped = true;
+  onVideoEnd();
 }
 
 /**
  * Show the end screen
- * 
+ *
  */
 function showCredit() {
-    document.removeEventListener("keyup", spaceListener);
-    document.getElementById('theater').remove()
-    stopCamera()
+  document.removeEventListener('keyup', spaceListener);
+  document.getElementById('theater').remove();
+  stopCamera();
 
-    document.getElementById('credit').style.display = 'flex'
-    document.getElementById('credit').className = 'fadeIn'
+  document.getElementById('credit').style.display = 'flex';
+  document.getElementById('credit').className = 'fadeIn';
 }
 
 function stopCamera() {
   // A video's MediaStream object is available through its srcObject attribute
-  const mediaStream = webcam.srcObject
+  const mediaStream = webcam.srcObject;
 
   // Through the MediaStream, you can get the MediaStreamTracks with getTracks():
-  const tracks = mediaStream.getTracks()
+  const tracks = mediaStream.getTracks();
 
   // Tracks are returned as an array, so if you know you only have one, you can stop it with:
-  tracks[0].stop()
+  tracks[0].stop();
 
   // Security stop all tracks
-  tracks.forEach((track) => track.stop())
+  tracks.forEach((track) => { return track.stop(); });
 
   // Set mediaStream to null
   webcam.srcObject = null;
@@ -424,10 +427,10 @@ function stopCamera() {
  * We use splice here to delete the chosen video from the pool.
  */
 function extractRandomAvailableVideoId() {
-    const randomNumber = Math.floor(Math.random() * listOfVideoIds.length)
-    const randomVideoId = listOfVideoIds.splice(randomNumber, 1)
+  const randomNumber = Math.floor(Math.random() * listOfVideoIds.length);
+  const randomVideoId = listOfVideoIds.splice(randomNumber, 1);
 
-    return randomVideoId
+  return randomVideoId;
 }
 
 /**
@@ -438,18 +441,19 @@ function extractRandomAvailableVideoId() {
  * @return {Boolean}
  */
 function isSmiling(expressions) {
-    // filtering false positive
-    const maxValue = Math.max(
-        ...Object.values(expressions).filter(value => value <= 1)
-    )
+  // filtering false positive
+  const maxValue = Math.max(
+    ...Object.values(expressions).filter((value) => { return value <= 1; }),
+  );
 
-    const expressionsKeys = Object.keys(expressions)
-    const mostLikely = expressionsKeys.filter(
-        expression => expressions[expression] === maxValue
-    )
+  const expressionsKeys = Object.keys(expressions);
+  const mostLikely = expressionsKeys.filter(
+    (expression) => { return expressions[expression] === maxValue; },
+  );
 
-    if (mostLikely[0] && mostLikely[0] == 'happy')
-        return true
+  if (mostLikely[0] && mostLikely[0] === 'happy') {
+    return true;
+  }
 
-    return false
+  return false;
 }

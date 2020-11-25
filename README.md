@@ -24,20 +24,20 @@ When a passphrase is asked just type : **default**
 
 ### Loading model URL
 
-In local you need to adjust the configuration of your URL for the models to load normaly : see **loadModels function** in **libs/app.js**
+In local you need to adjust the configuration of your URL for the models to load normaly : see **loadModels function** in **src/js/app.js**
 
 ## Launch
 
 ### Dev
 
 ``` bash
-npm run-script start-dev
+npm run dev
 ```
 
 ### Prod
 
 ``` bash
-npm start
+npm run build
 ```
 
 *Project was inspired by [yousmileyoulose](https://github.com/jesuisundev/yousmileyoulose)*

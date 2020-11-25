@@ -46,13 +46,13 @@
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^5.4.0"
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "express": "^4.17.1",
     "face-api.js": "^0.22.2",
     "regenerator-runtime": "^0.13.3",
-    "serve-index": "^1.9.1"
+    "serve-index": "^1.9.1",
+    "webpack-merge": "^5.4.0"
   }
 }
