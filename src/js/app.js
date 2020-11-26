@@ -170,9 +170,9 @@ async function setupYoutubePlayer() {
       disablekb: 1,
       autoplay: 1,
       start: 0,
-      ...(savedIdVideo === 'aE3hKVtwsJ0' && { end: 36 }),
-      ...(savedIdVideo === '6cmg75bgkkg' && { end: 145 }),
-      ...(savedIdVideo === 'W3GrSMYbkBE' && { end: 101 }),
+      ...(savedIdVideo[0] === 'aE3hKVtwsJ0' && { end: 36 }),
+      ...(savedIdVideo[0] === '6cmg75bgkkg' && { end: 145 }),
+      ...(savedIdVideo[0] === 'W3GrSMYbkBE' && { end: 101 }),
     },
     events: { onStateChange: onPlayerStateChange, onReady: onPlayerReady },
   });
@@ -378,9 +378,9 @@ function showNextVideo(event) {
     player.loadVideoById({
       videoId: nextVideoId,
       startSeconds: 0,
-      ...(nextVideoId === 'aE3hKVtwsJ0' && { endSeconds: 36 }),
-      ...(nextVideoId === '6cmg75bgkkg' && { endSeconds: 145 }),
-      ...(nextVideoId === 'W3GrSMYbkBE' && { endSeconds: 101 }),
+      ...(nextVideoId[0] === 'aE3hKVtwsJ0' && { endSeconds: 36 }),
+      ...(nextVideoId[0] === '6cmg75bgkkg' && { endSeconds: 145 }),
+      ...(nextVideoId[0] === 'W3GrSMYbkBE' && { endSeconds: 101 }),
     });
     document.addEventListener('keyup', spaceListener);
 
