@@ -1,5 +1,4 @@
 /* eslint-disable */
-// const express = require("express")
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
