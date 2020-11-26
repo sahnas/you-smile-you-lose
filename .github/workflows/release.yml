@@ -16,7 +16,7 @@ jobs:
           node-version: "12.x"
       - run: npm install
       - run: npm run build
-      - run: zip -r dist.zip dist
+      - run: zip -r app.zip dist
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
