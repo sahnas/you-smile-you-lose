@@ -14,7 +14,7 @@ module.exports = {
   },
   devtool: false,
   externals: {
-    "node-fetch": "fetch"
+    "node-fetch": "fetch",
   },
   optimization: {
     minimize: true,
@@ -32,6 +32,10 @@ module.exports = {
       {
         from: "src/models",
         to: "./models",
+      },
+      {
+        from: "src/img/preview.jpg",
+        to: "./img"
       },
     ]),
   ],
