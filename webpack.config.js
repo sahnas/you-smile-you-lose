@@ -34,9 +34,10 @@ module.exports = {
         to: "./models",
       },
       {
-        from: "src/img/preview.jpg",
+        from: "src/img",
         to: "./img",
-        ToType: 'file',
+        ToType: "file", 
+        ignore: ["favicon.ico"],
       },
     ]),
   ],
