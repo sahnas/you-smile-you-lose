@@ -34,7 +34,7 @@ module.exports = {
         to: "./models",
       },
       {
-        from: "src/img/preview.jpg",
+        from: path.resolve(__dirname, "src/img/preview.jpg"),
         to: "./img"
       },
     ]),
