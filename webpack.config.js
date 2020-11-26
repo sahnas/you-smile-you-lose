@@ -37,7 +37,7 @@ module.exports = {
         from: "src/img",
         to: "./img",
         ToType: "file", 
-        ignore: ["favicon.ico"],
+        ignore: ["favicon.ico", "background.png"],
       },
     ]),
   ],
