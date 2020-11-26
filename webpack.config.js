@@ -34,8 +34,8 @@ module.exports = {
         to: "./models",
       },
       {
-        from: path.resolve(__dirname, "src/img/preview.jpg"),
-        to: "./img",
+        from: path.resolve(__dirname, "src/img") + "/preview.jpg",
+        to: "./img/preview.png",
         ToType: file,
       },
     ]),
