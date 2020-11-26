@@ -16,11 +16,9 @@ module.exports = {
   },
   devtool: false,
   externals: {
-    'node-fetch': 'fetch'
+    "node-fetch": "fetch",
+    // "./ext/ext.js": "globalHello",
   },
-  // externals: {
-  //   "./ext/ext.js": "globalHello",
-  // },
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin({ extractComments: false })],
