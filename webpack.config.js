@@ -96,13 +96,6 @@ module.exports = {
     inline: true,
     contentBase: path.resolve(__dirname, "dist"),
     port: 5000,
-    // before: function (app, server, compiler) {
-    //   app.use(
-    //     "/models",
-    //     express.static(__dirname + "src/models"),
-    //     serveIndex(__dirname + "/src/models", { icons: true })
-    //   );
-    // },
   },
   node: {
     fs: "empty",
