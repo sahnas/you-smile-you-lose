@@ -58,6 +58,8 @@ const listOfVideoIds = [
   'lYb83GT4ELw',
   'ErbLGWhWaKI',
   'yBLdQ1a4-JI',
+  'AXrHbrMrun0',
+  'ynslyx0G0Vs',
 ];
 
 let isFirstRound = true;
@@ -70,10 +72,18 @@ let scoreTitle = 'Score';
 let pausedVideo = false;
 let countNoFace = 0;
 
-document.getElementById('actualshit').addEventListener('click', (event) => { return setupFaceDetection(event); });
-document.getElementById('nextVideo').addEventListener('click', (event) => { return showNextVideo(event); });
-document.getElementById('skipVideo').addEventListener('click', (event) => { return skipVideo(event); });
-document.getElementById('pauseVideo').addEventListener('click', (event) => { return pauseVideo(event); });
+document.getElementById('actualshit').addEventListener('click', (event) => {
+  return setupFaceDetection(event);
+});
+document.getElementById('nextVideo').addEventListener('click', (event) => {
+  return showNextVideo(event);
+});
+document.getElementById('skipVideo').addEventListener('click', (event) => {
+  return skipVideo(event);
+});
+document.getElementById('pauseVideo').addEventListener('click', (event) => {
+  return pauseVideo(event);
+});
 
 // initiate webcam
 const webcam = document.getElementById('webcam');
@@ -194,7 +204,10 @@ let spaceListener = (e) => {
 async function refreshState() {
   setInterval(async () => {
     const detections = await faceapi
-      .detectAllFaces(webcam, new faceapi.TinyFaceDetectorOptions({ inputSize: 160 }))
+      .detectAllFaces(
+        webcam,
+        new faceapi.TinyFaceDetectorOptions({ inputSize: 160 }),
+      )
       .withFaceExpressions();
 
     if (!detections.length) {
@@ -416,7 +429,9 @@ function stopCamera() {
   tracks[0].stop();
 
   // Security stop all tracks
-  tracks.forEach((track) => { return track.stop(); });
+  tracks.forEach((track) => {
+    return track.stop();
+  });
 
   // Set mediaStream to null
   webcam.srcObject = null;
@@ -443,13 +458,15 @@ function extractRandomAvailableVideoId() {
 function isSmiling(expressions) {
   // filtering false positive
   const maxValue = Math.max(
-    ...Object.values(expressions).filter((value) => { return value <= 1; }),
+    ...Object.values(expressions).filter((value) => {
+      return value <= 1;
+    }),
   );
 
   const expressionsKeys = Object.keys(expressions);
-  const mostLikely = expressionsKeys.filter(
-    (expression) => { return expressions[expression] === maxValue; },
-  );
+  const mostLikely = expressionsKeys.filter((expression) => {
+    return expressions[expression] === maxValue;
+  });
 
   if (mostLikely[0] && mostLikely[0] === 'happy') {
     return true;
