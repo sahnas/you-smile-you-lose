@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const serveIndex = require("serve-index");
 
 module.exports = {
   entry: "./src/js/entry.js",
@@ -16,8 +15,7 @@ module.exports = {
   },
   devtool: false,
   externals: {
-    "node-fetch": "fetch",
-    // "./ext/ext.js": "globalHello",
+    "node-fetch": "fetch"
   },
   optimization: {
     minimize: true,
