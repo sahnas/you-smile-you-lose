@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "dev": "webpack-dev-server --open --hot --watch --config webpack.dev.js",
     "build": "rm -rf dist && webpack --mode=production --progress",
     "start": "node server.js"
   },
@@ -50,7 +50,9 @@
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-hot-server-middleware": "^0.6.1"
   },
   "dependencies": {
     "express": "^4.17.1",

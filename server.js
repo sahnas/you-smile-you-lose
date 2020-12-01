@@ -1,5 +1,10 @@
 const path = require('path');
 const express = require('express');
+const compiler = require('webpack')(require('./webpack.config.js'));
+
+app.use(require('webpack-dev-middleware')(compiler));
+app.use(require('webpack-hot-middleware')(compiler));
+app.use(require('webpack-hot-server-middleware')(compiler));
 
 const app = express();
 

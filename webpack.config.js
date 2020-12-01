@@ -27,6 +27,9 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
       favicon: "src/img/favicon.ico",
+      minify: {
+        collapseWhitespace: true,
+      },
     }),
     new CopyWebpackPlugin([
       {
@@ -36,7 +39,7 @@ module.exports = {
       {
         from: "src/img",
         to: "./img",
-        ToType: "file", 
+        ToType: "file",
         ignore: ["favicon.ico", "background.png"],
       },
     ]),
