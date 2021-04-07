@@ -446,7 +446,7 @@ function extractRandomAvailableVideoId() {
   const randomNumber = Math.floor(Math.random() * listOfVideoIds.length);
   const randomVideoId = listOfVideoIds.splice(randomNumber, 1);
 
-  return randomVideoId;
+  return randomVideoId[0];
 }
 
 /**
