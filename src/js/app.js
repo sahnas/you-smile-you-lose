@@ -168,6 +168,7 @@ async function setupYoutubePlayer() {
       modestbranding: 1,
       iv_load_policy: 3,
       disablekb: 1,
+      origin: 'https://smilelose.socialcase.fr', 
       autoplay: 1,
       start: 0,
       ...(savedIdVideo[0] === 'aE3hKVtwsJ0' && { end: 36 }),
