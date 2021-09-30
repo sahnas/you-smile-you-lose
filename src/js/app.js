@@ -32,7 +32,6 @@ const listOfVideoIds = [
   'e4nc3uO_eCQ',
   'kxC8AxSjmqQ',
   'W5aEBqSkS_Q',
-  'W3GrSMYbkBE',
   'GzgavGowD_A',
   'JBd0ERZhCis',
   'okSM8i2EpI0',
@@ -58,15 +57,7 @@ const listOfVideoIds = [
   'ynslyx0G0Vs',
   'm9mth6MXnso',
   'NpqfUI7DDB4',
-  'COmXHjhHqR0',
-  'gJMiOanr7nY',
-  '815RW7f3k2Y',
-  'pVQDqLLskqc',
-  'ArX1Zx08enE',
-  'Ugi2kZeqzRo',
-  'KDZ1nYwfC2k',
-  'hgSQg3R9GUA',
-  'vrKp5KhDLQE'
+  'pVQDqLLskqc'
 ];
 
 let isFirstRound = true;
