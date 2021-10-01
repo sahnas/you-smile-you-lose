@@ -246,11 +246,11 @@ function writeNoFace() {
 }
 
 function writeSmile() {
-  document.getElementById('smileStatus').textContent = 'YOU SMILE !';
+  document.getElementById('smileStatus').textContent = 'YOU SMILE!';
 }
 
 function writeNoSmile() {
-  document.getElementById('smileStatus').textContent = 'not smiling';
+  document.getElementById('smileStatus').textContent = 'Not smiling';
 }
 
 /**
@@ -333,21 +333,21 @@ function matchUiWithWinStatus() {
  * Result is defined by various global variable updated by the models.
  */
 function showIntermission() {
-  let smileStatusText = 'Face detection was not ready.';
+  let smileStatusText = 'Face detection was not ready';
 
   if (isUsingCamera) {
     if (videoSkipped) {
       videoSkipped = false;
       // player will not lose if he skips the video
       currentSmileStatus = false;
-      smileStatusText = 'You skipped the video ! It will not count !';
+      smileStatusText = 'You skipped the video! It will not count!';
       matchUiWithWinStatus();
     } else if (currentSmileStatus) {
-      smileStatusText = 'You SMILED during the video !';
+      smileStatusText = 'You SMILED during the video!';
       matchUiWithWinStatus();
       score = 0;
     } else {
-      smileStatusText = "You didn't smile during the video !";
+      smileStatusText = "You didn't smile during the video!";
       score += 1;
       matchUiWithWinStatus();
     }
