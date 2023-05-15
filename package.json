@@ -6,7 +6,7 @@
   "main": "server.js",
   "browser": "./dist/index.html",
   "engines": {
-    "node": "12.14.x",
+    "node": "18.16.x",
     "npm": "6.13.x"
   },
   "scripts": {
